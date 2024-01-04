@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="single-info row">
+    <div class="col-6">
+
+        <h1 class="text-center">{{newsDetails.news_title}}</h1>
+        <p>{{newsDetails.news_desc | safe}}</p>
+    </div >
+    <div class="col-6">
+        {% if newsDetails.news_img != NULL %}
+        <img src="/media/{{newsDetails.news_img}}" class="img-fluid">
+        {% endif %}
+    </div>
+</div>
+{%endblock%}

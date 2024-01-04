@@ -1,0 +1,210 @@
+
+    {% extends "base.html" %}
+    {% block content %}
+<marquee onmouseover="stop()" onmouseout="start()"  >
+    
+    {% for news in newsData %}
+         <a href="/newsDetails/{{news.new_slug}}">{{news.news_title}} </a>   &nbsp;&nbsp;&nbsp;&nbsp;
+          {%endfor%}
+</marquee>
+    <div>
+        <div>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner w-100">
+                    <div class="carousel-item active">
+                        <img src="https://img.freepik.com/premium-photo/graduates-stand-with-diplomas-lobby-university_85574-14580.jpg?size=626&ext=jpg&ga=GA1.1.1534446228.1694758789&semt=ais"
+                            class="" style="height: 540px; width: 100%;" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>All India Test Series - CBSE </h1>
+                            <p>Gauge and improve your performance through All India Test Series CBSE🏅</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item w-100">
+                        <img src="https://img.freepik.com/free-photo/front-view-female-student-white-shirt-black-jacket-wearing-backpack-holding-files-with-copybooks-blue-wall-college-university-lessons_140725-43393.jpg?size=626&ext=jpg&ga=GA1.1.1534446228.1694758789&semt=ais"
+                            class="" style="height: 540px; width: 100%;" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Best Web Design Training Institute</h1>
+                            <p>India's Leading intelligent Interactive Panel For Education</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item w-100">
+                        <img src="https://img.freepik.com/free-photo/multi-ethnic-group-graduates-smiling-with-success-generated-by-ai_188544-24701.jpg"
+                            class="" style="height: 540px; width: 100%;" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h1>Book your Free Demo session</h1>
+                            <p> All teachers teach. Greatest teachers inspire</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="container border border-3 shadow "
+            style="margin: auto; margin-top: 1%; border-radius: 8px; white-space: nowrap;">
+            <h3 class="bg-warning text-center" style="width: 20%; border-radius: 10px;">Popular Courses</h3>
+            <div class="row row-cols-4 " style=" white-space: wrap;">
+                <div class="col border border-secondary rounded-top m-2 card-body" style="width: 10rem;">
+                    <div class="card-body">
+                        <h6 class="subtitle mb-2 text-muted">subtitle</h6>
+                        <h5 class="jeee-crash">JEE Crash</h5>
+                        <p class="card-text">Some quick bordy </p>
+                    </div>
+                </div>
+                <div class="col border border-secondary rounded-top m-2 card-body" style="width: 10rem;">
+                    <div class="card-body">
+                        <h6 class="subtitle mb-2 text-muted">subtitle</h6>
+                        <h5 class="neet-crash">NEET Crash</h5>
+                        <p class="card-text">Some quick bordy </p>
+                    </div>
+                </div>
+                <div class="col border border-secondary rounded-top m-2 card-body" style="width: 10rem;">
+                    <div class="card-body">
+                        <h6 class="subtitle mb-2 text-muted">subtitle</h6>
+                        <h5 class="card-title">Early Learning</h5>
+                        <p class="card-text">Some quick card bordy </p>
+                    </div>
+                </div>
+                <div class="col border border-secondary rounded-top m-2 card-body" style="width: 10rem;">
+                    <div class="card-body">
+                        <h6 class="subtitle mb-2 text-muted">subtitle</h6>
+                        <h5 class="eamcet">EAMCET</h5>
+                        <p class="card-text">Some quick bordy </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container " style="margin: auto; margin-top: 10%; border-radius: 8px; white-space: wrap;">
+            <div style="white-space: nowrap; flex-wrap: nowrap; display: inline-block">
+                <h2 class="row" style="display: inline-block;">Explore courses <a>class(1-12)</a></h2>
+                </p>
+            </div>
+            <div class="row row-cols-4 " style=" padding: 10px;">
+                <div class="card border border-secondary m-2 card-body shadow "
+                    style="width: 18rem; border-radius: 20px; background-image: url('https://img.freepik.com/premium-photo/young-asian-indian-student-with-glasses-backpack-holds-laptop-shows-thumbs-up-sign_928503-88.jpg');">
+                    <div class="card-body">
+
+                        <p>class 5-12</p>
+                        <h5 class="competitive-exame">Competitive Exame</h5>
+                        <div href="#" class="btn btn-outline-secondary m-1 border border-1 ">JEE</div>
+                        <div href="#" class="btn btn-outline-secondary m-1 border border-1 ">NEET</div>
+                        <div href="#" class="btn btn-outline-secondary m-1 border border-1  ">JEE/NEET Foundation</div>
+                        <br />
+                        <div href="#" class="btn btn-outline-secondary m-1 border border-1  ">EAMCET</div><br />
+                        <div href="#" class="btn btn-outline-secondary m-1 border border-1  ">Olympiad</div><br />
+                        <a href="#" class="btn  m-1  bg-danger bg-gradient">Explore courses</a>
+                    </div>
+
+                </div>
+
+                <div class="card border border-secondary m-2 card-body shadow "
+                    style="width: 18rem;  border-radius: 20px; background-image: url('https://img.freepik.com/premium-photo/young-asian-indian-student-with-glasses-backpack-holds-laptop-shows-thumbs-up-sign_928503-88.jpg'); ">
+                    <div class="card-body">
+                        <p>class 3-12</p>
+                        <h5 class="school-tuition">School Tuition</h5>
+                        <div href="#" class="btn btn-outline-secondary  m-1 border border-1 ">CBSE Board</div><br />
+                        <div href="#" class="btn btn-outline-secondary  m-1 border border-1  ">ICSE Board</div><br />
+                        <div href="#" class="btn btn-outline-secondary  m-1 border border-1  ">Learn code</div><br />
+                        <a href="#" class="btn  m-1   bg-danger bg-gradient">Explore courses</a>
+                    </div>
+
+                </div>
+
+                <div class="card border border-secondary m-2 card-body shadow "
+                    style="width: 18rem;  border-radius: 20px; background-image: url('https://img.freepik.com/premium-photo/young-asian-indian-student-with-glasses-backpack-holds-laptop-shows-thumbs-up-sign_928503-88.jpg');">
+                    <div class="card-body">
+                        <p>class 1-5</p>
+                        <h5 class="courses-kids">Courses for kids</h5>
+
+                        <div href="#" class="btn btn-outline-secondary  m-1 border border-1 ">English Reading</div>
+                        <br />
+                        <div href="#" class="btn btn-outline-secondary  m-1 border border-1  ">Spoken English</div>
+                        <br />
+                        <div href="#" class="btn btn-outline-secondary  m-1 border border-1  ">Learn Math</div><br />
+                        <div href="#" class="btn btn-outline-secondary  m-1 border border-1  ">Learn code</div><br />
+                        <a href="#" class="btn m-1 bg-danger bg-gradient">Explore courses</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container " style="margin: auto; margin-top: 9%;">
+            <div>
+                <h1>Explore all our offerings</h1>
+                <div class="row row-cols-10 " style="padding: 10px;">
+                    <a href="#" class="col-lg-2 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 12 pass</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 12</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 10</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 9</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 8</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 7</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 6</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 5</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 4</a><br />
+                    <a href="#" class="col-lg-1 btn btn-outline-secondary m-1 border border-1 "
+                        style="white-space: nowrap;">Class 1-3</a><br />
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style=" margin: 10%; border-radius: 8px; white-space: wrap;">
+            <h2>Free LIVE Classes</h2>
+            <div class="container">
+                <div class="row row-cols-10" style=" padding: 8px;">
+                    <div class="card border border-secondary m-2 shadow " style="width: 18rem;border-radius: 10px; ">
+                        <img src="https://thinkexam.com/blog/wp-content/uploads/2020/03/Start-your-online-live-classes.png"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4>JEE</h4>
+                            <p class="card-text">Live class</p>
+                        </div>
+                    </div>
+                    <div class="card border border-secondary m-2 shadow " style="width: 18rem;border-radius: 10px; ">
+                        <img src="https://media.istockphoto.com/id/1366428092/photo/webinar-e-learning-skills-business-internet-technology-concepts-training-webinar-e-learning.webp?b=1&s=612x612&w=0&k=20&c=1I482dWMSRMPf2G_DmcEeVohqk_ErVfd9s7r1xYf2mA="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4>NEET</h4>
+                            <p class="card-text">Live class</p>
+                        </div>
+                    </div>
+                    <div class="card border border-secondary m-2 shadow " style="width: 18rem;border-radius: 10px; ">
+                        <img src="https://cdn.pixabay.com/photo/2020/07/02/18/20/webinar-5363819_640.png"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4>EAMCET</h4>
+                            <p class="card-text">Live class</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    
+

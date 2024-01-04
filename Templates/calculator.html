@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% block content %}
+<section>
+    <div class="border border-secondary shadow-lg p-3 mb-5 bg-white rounded" style="margin: 10% 0 0 30%; width: 35%;">
+        <h2 class="text-primary text-center">Calculator</h2>
+        <div class="row">
+            <form class="col-12 form-group" method="post" >
+                {% csrf_token %}
+            
+                <div>
+                <label for="" >value1</label>
+                    <input type='number' placeholder="Enter your value 1" value="{{n1}}" name="num1" id="name" class="form-control mb-3 " />
+                </div>
+                <div>
+                    <label for="">selct operater</label>
+                    <select class="form-control" name="opr" value="{{opr}}">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">value2</label>
+                    <input type="number" placeholder="Enter your value 2" value="{{n2}}" name="num2" id="last" class="form-control mb-3  " />
+                </div>
+                <div>
+                    <label for="">result</label>
+                    <input class="mb-3 form-control" value="{{result}}" type="text"/>
+                </div>
+                <!-- <div>
+                    <label for="">Password</label>
+                    <input type="password"  id="password" name="pass1" class="form-control mb-3  " />
+
+                </div> -->
+                <div>
+                <button type="submit" class="btn btn-primary">save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

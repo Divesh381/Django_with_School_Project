@@ -1,0 +1,73 @@
+.home{
+    font-size: 60px;
+}
+.home-area{
+background-color: rgb(121, 47, 190);
+}
+.learn-page{
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.hrefline{
+   text-decoration: none;
+}
+.button-btn{
+    width: 20%; 
+    border-radius: 10px; 
+    font-size: 1.5em;
+     font-weight: 600;
+}
+.row-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.body-colpage
+{
+    
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+    width: 30%;
+    margin: 2%;
+}
+.body-card{
+    
+    background-color: white;
+
+    padding: 3% 8%;        
+    transition: 0.3s;
+    color: black;
+    border-radius: 10px;
+     
+}
+.ionsicons{
+    font-size: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .learn-page{ 
+              
+             font-size: 1rem;
+                            
+        }
+      
+        .button-btn{
+            width: 50%;
+            font-size: 1rem;
+        }
+        .row-card{
+            display: block;
+            padding: 10px;
+        
+        }
+        .body-colpage{
+            width: 100%;
+            }
+            .body-card{
+                padding: 4% 7%;
+                }
+  }

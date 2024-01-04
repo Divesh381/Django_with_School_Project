@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+<section>
+  <div class="container">
+    <form action="" method="get">
+      <!-- {% csrf_token %} -->
+      <div class="mt-5">
+        <div>
+          <label for>Search</label>
+          <input type="text" name="servicename" class="form-control-lg-5 " />
+          <button type="submit" class="btn btn-primary">Go!</button>
+        </div>
+      </div>
+    </form>
+      <div class="row m-5">
+      {% for n in servicesFilter %}
+      <div class="col-sm-6">  
+        <div class="card">
+          <div class="card-body">
+            <ion-icon class="	ionsicons" style="font-size: 60px;" name="{{n.servicesDataFilter_icon}}"></ion-icon>
+            <h5 class="card-title">{{n.servicesDataFilter_title}}</h5>
+            <p class="card-text">{{n.servicesDataFilter_desc | safe}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="text-center text-danger h1 border border-secondary ">No Data Found </div>
+      {% endfor %}
+      <nav aria-label="...">
+        <ul class="pagination">
+         {% if servicesFilter.has_previous %}
+          <li class="page-item ">
+            <a class="page-link" href="/servicesData/?page=1" tabindex="-1">First</a>
+          </li>
+          <li class="page-item ">
+            <a class="page-link" href="/servicesData/?page={{servicesFilter.previous_page_number}}" tabindex="-1">Previous</a>
+          </li>
+          {% endif %}
+          {% for n in totalpagelist %}
+
+          <li class="page-item"><a class="page-link" href="/servicesData/?page={{n}}">{{n}}</a></li>
+          {% endfor %}
+          <!-- <li class="page-item ">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+          {% if servicesFilter.has_next %}
+
+          <li class="page-item">
+            <a class="page-link" href="/servicesData/?page={{servicesFilter.next_page_number}}">Next</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="/servicesData/?page  ={{lastpage}}">Last</a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+{% endblock %}

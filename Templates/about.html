@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="/static/home.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section>
+        <div class="container" style="width: 100%; height:400px; margin: 0 auto 0px; border-radius: 20px;">
+            <div class="home-area p-4 text-white shadow"
+                style="text-align: center; border-radius: 10px; height: 22.5rem">
+                <h1 class="home">Welcome Home</h1>
+                <div class="learn-page text-center text-wrap fw-bolder mt-4">Start by deciding on the subject or topic
+                    you want to learn<br />
+                    more about. It could be something related to your interests, career, <br />or a new skill you want
+                    to acquire.</div>
+                <button type="button" class="button-btn btn-outline-info border border-2 p-1 mt-4"><a href="{% url 'main' %}" class="hrefline">Learn More</a>
+            </button>
+            </div>
+        </div>
+    </section>
+ <center>hello {{output}}</center>
+    <section>
+        <div class="container">
+            <div class="row-card">
+                {% for n in servicesData %}
+                <div class="body-colpage">
+                    <div class="">
+                        <div class="card-body body-card ">
+                            <ion-icon class="{{n.service_icon}}" name="{{n.service_title}}"></ion-icon>
+                            <!-- ## template filter use (safe, upper, lower,and other) -->
+                            <p class="card-text">{{n.service_des | safe }}
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="body-colpage">
+                    <div class="">
+                        <div class="card-body body-card">
+                            <ion-icon class="ionsicons" name="filter"></ion-icon>
+                            <p class="card-text ">Select a platform or service to host your data. There are various
+                                options available, including <b>cloud storage </b>services, web hosting providers, and
+                                <b>content
+                                    management systems</b> (CMS).
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="body-colpage">
+                    <div class="">
+                        <div class="card-body body-card">
+                            <ion-icon class="ionsicons" name="accessibility"></ion-icon>
+                            <p class="card-text">Consider your reading goals. Are you reading for <b>entertainment,
+                                    education, personal growth</b>, or a combination of these? Your goals will influence
+                                the
+                                types of books you select.</p>
+
+                        </div>
+                    </div>
+                </div> -->
+            </div> 
+        </div>
+    </section>
+</body>
+
+</html>
+{% endblock  %}

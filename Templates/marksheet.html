@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="border border-secondary shadow-lg p-3 mb-5 bg-white rounded" style="margin: 10% 0 0 30%; width: 35%;">
+
+        <h1>Marksheet</h1>
+        <form method="post">
+            {% if error %}
+            <div>
+                <div class="alert alert-danger" role="alert" >
+                    Please enter a number
+                </div>
+            </div>
+            {% endif %}
+            {% csrf_token %}
+            <div>
+                <label for="">Subject1</label>
+                <input type="number" class="form-control" name="subject1"
+                    id="subject1" />
+            </div>
+            <div>
+                <label for="">Subject2</label>
+                <input type="number" class="form-control" name="subject2"
+                    id="subject2" />
+            </div>
+            <div>
+                <label for="">Subject3</label>
+                <input type="number" class="form-control" name="subject3"
+                    id="subject3" />
+            </div>
+            <div>
+                <label for="">Subject4</label>
+                <input type="number" class="form-control" name="subject4"
+                    id="subject4" />
+            </div>
+            <div>
+                <label for="">Subject5</label>
+                <input type="number" class="form-control" name="subject5"
+                    id="subject5" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Total</button>
+                <input type="text" class="form-control" value="{{total}}" />
+            </div>
+            <div>
+                <label for>Percentage</label>
+                <input type="text" class="form-control" value="{{percentage}}" />
+            </div>
+            <div>
+                <label for>Division</label>
+                <input type="text" class="form-control" value="{{division}}" />
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

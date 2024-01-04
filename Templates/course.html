@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <form method="post" role="form" id="contact" action="{% url 'saveenquiry' %}" class="bv-form" novalidate="novalidate">
+            {% csrf_token %}
+            <div class="container m-5">            
+            <div class="col-lg-5">
+                <label for="name">Name</label><br>                
+                <input type="text" class="form-control" id="name" name="name"  value=""  placeholder="First name" required />
+              </div>
+            <div class="col-lg-5">
+                <label for="name">Email</label><br>                
+                <input type="email" class="form-control" id="email" name="email"  value=""  placeholder="Enter email" required />
+              </div>
+            <div class="col-lg-5">
+                <label for="name">Phone</label><br>                
+                <input type="number" class="form-control" id="phone" name="phone"  value=""  placeholder="Enter password" required />
+              </div>
+            <div class="col-lg-5">
+                <label for="name">Website Name</label><br>                
+                <input type="url" class="form-control" id="website" name="website"  value="" placeholder="Enter website name"/>
+              </div>
+            <div class="col-sm-6">
+                <label for="name">Text Area</label><br>                
+                <!-- <input type="text" class="form-control w-100"  id="name" name="name"  value="" placeholder="Message"/> -->
+                <Textarea  type="text" class="form-control w-100"  id="textarea" name="message"  value="" placeholder="Message" ></Textarea>
+              </div>
+            <!-- <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br>
+            <h1>{{message}}</h1>
+        </div>
+          </form>
+    </body>
+    </html>
+{% endblock  %}
